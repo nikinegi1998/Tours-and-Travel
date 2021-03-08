@@ -1,0 +1,352 @@
+*{
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100vw;
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("./images/gallery-1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: all ease;
+    animation: gallery 20s infinite;
+}
+@keyframes gallery{
+    /* 0%{
+        background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("./images/gallery-1.jpg");
+        background-size: cover;
+        background-position: center;
+    } */
+    25%{
+        background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("./images/gallery-1.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    50%{
+        background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("./images/gallery-2.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    75%{
+        background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("./images/gallery-3.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    100%{
+        background: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)), url("./images/gallery-4.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+header nav{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+header nav a img{
+    width: 25%;
+    margin: 1rem 3rem 0;
+}
+
+header nav ul{
+    float: right;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+header nav ul li a{
+    margin: 20px;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+}
+header nav ul li a:hover{
+    border-bottom: 3px solid #3da35d;
+}
+
+header nav button a{
+    color: black;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 0 10px;
+    text-decoration: none;
+}
+header nav button{
+    margin: 2rem 1rem;
+    padding-bottom: 3px;
+    background-color: #3da35d;
+    border-radius: 8px;
+    border:  none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+main{
+    width: 100vw;
+}
+main .heading{
+    height: auto;
+}
+
+main .heading h1{
+    text-align: center;
+    margin: 3rem auto;
+    font-family: 'Dancing Script', cursive;
+}
+
+main .container{
+    width: 81%;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: rgb(150, 147, 147);
+    align-items: center;
+    justify-content: center;
+}
+.cards{
+    border: 1px solid #ccc;
+    width: 25%;
+    cursor: pointer;
+    margin: 20px;
+    border-radius: 15px;
+    height: auto;
+    box-shadow: 0px 0px 15px #ccc;
+}
+.cards img{
+    background-position: center;
+    background-size: contain;
+    width: 100%;
+    height: 50vh;
+    
+}
+.cards:hover{
+    transform: scale(1.05);
+    transition: all 1s ease-in-out;
+}
+main .container h3, p{
+    text-align: center;
+}
+main .container h3{
+    color: black;
+}
+main .container button{
+    position: relative;
+    margin: 10px 35%;
+    background-color: #3da35d;
+    outline: none;
+    border: none;
+    padding: 5px 10px;
+    font-weight: 700;
+    border-radius: 3px;
+}
+
+.copyright{
+    width: 100%;
+    /* height: 2.5rem; */
+    text-align: center;
+}
+.copyright h5{
+    padding-bottom: 5px;
+    color: #ccc;
+    font-size: 15px;
+}
+hr{ 
+    border: 0; 
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
+  }
+  
+  
+.copyright h5 span::before{
+    content: "\2665";
+    color: rgb(139, 4, 4);
+    font-size: 20px;
+}
+
+footer{
+    display: flex;
+    margin-top: 10rem;
+    background-color: black;
+    color: #fff;    
+    flex-direction: column;
+    box-shadow: -2px 0 15px black; 
+}
+
+footer .end{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+footer .end img{
+    width: 20%;
+    height: 10px;
+    margin: 3rem;
+    height: auto;
+}
+footer .end ul{
+    display: flex;
+    margin: 2rem;
+    flex-direction: column;
+    list-style: none;
+}
+footer .end ul li a{
+    color: #ccc;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1400px){
+    
+    header nav{
+        width: 100%;
+        margin: 0 auto;
+    }
+    header nav a{
+        width: 25%;
+    }
+    header nav a img{
+        width: 50%;
+        margin: 1.5rem 4rem;
+    }
+
+    header nav ul li a, header nav button a{
+        font-size: 18px;
+    }
+    
+    .cards{
+        width: 35%;
+        margin: 20px;
+    }
+    
+    main .container{
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1096px){
+    .cards{
+        width: 40%;
+        margin: 20px;
+    }
+    
+    main .container{
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width: 910px){
+    
+    header nav a img, header nav button{
+        visibility: hidden;
+    }
+    header nav ul{
+        width: 100%;       
+        position: absolute;
+        top: 0;
+    }
+    header nav ul li a{
+        font-size: 15px;
+    }        
+    header nav{
+        width: 100%;
+        display: block;
+        margin: 0;
+        height: auto;
+    }
+    footer, footer .copyright h5{
+        font-size: 13px;
+    }
+    footer .end img{
+        width: 22%;
+    }
+    
+}
+
+@media screen and (max-width:860px){
+    
+    main .container button{
+        width: 5.5rem;
+    }
+}
+@media screen and (max-width: 752px){
+
+    .cards{
+        width: 50%;
+        margin: 20px;
+    }
+    
+    footer .end img{
+        width: 25%;
+    }
+    
+}
+
+@media screen and (max-width: 480px){
+    
+    header nav a img, header nav button{
+        visibility: hidden;
+    }
+    header nav ul{        
+        width: 100%;       
+        position: absolute;
+        display: block;
+        text-align: center;
+        top: 0;
+    }
+    header nav ul li a{
+        font-size: 15px;
+    }        
+    header nav{
+        background-color: black;
+        position: relative;
+        width: 100%;
+        height: 10rem;
+        
+    }
+    
+    main .heading h1{
+        font-size: 20px;
+    }
+    
+    .cards{
+        width: 80%;
+        margin: 20px;
+    }
+    
+    main .container{
+        font-size: 11px;
+    }
+    
+    footer .end img{
+        width: 28%;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+    
+    main .heading h1{
+        font-size: 17px;
+    }
+    
+    .cards{
+        width: 90%;
+        margin: 20px;
+    }
+    
+    footer .end img{
+        width: 35%;
+    }
+}
